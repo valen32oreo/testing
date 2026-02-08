@@ -302,59 +302,122 @@ section h2 {
 }
 /* End Portfolio Card */
 
-/* Language */
-.language-grid {
+/* Ryzcle Section Styles */
+.ryzcle-header {
+  max-width: 1200px;
+  margin: 0 auto 80px;
+  text-align: center;
+}
+
+.ryzcle-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #999;
+}
+
+.ryzcle-title {
+  margin-top: 16px;
+  font-size: clamp(28px, 5vw, 42px);
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.ryzcle-cards-container {
+  max-width: 1200px;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+  gap: 40px;
+  align-items: stretch;
 }
 
-.language-card {
-  background-color: #ffffff;
-  border-radius: 16px;
-  padding: 24px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
+.ryzcle-card {
+  height: 100%;
+  border-radius: 40px;
+  padding: clamp(24px, 4vw, 56px);
+  background: white;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+  transition: all 0.3s ease;
 }
 
-.language-card:hover {
-  transform: translateY(-5px);
+.ryzcle-card:hover {
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  transform: translateY(-4px);
 }
 
-/* Bendera + Nama Bahasa */
-.language-header {
+.ryzcle-logo-row {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 12px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid #c0c0c0; /* garis bawah */
+  justify-content: center;
+  gap: clamp(20px, 4vw, 40px);
+  margin-bottom: 40px;
+  flex-wrap: wrap;
 }
 
-.flag-icon {
-  height: 32px;         /* Tetapkan tinggi tetap */
-  width: auto;          /* Lebar otomatis agar proporsional */
-  border-radius: 6px;
-  object-fit: cover;    /* Jika kamu ingin crop konsisten */
+.ryzcle-icon {
+  height: clamp(40px, 8vw, 64px);
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
-.language-header h3 {
-  font-size: 20px;
-  color: #333;
+.ryzcle-divider {
+  height: clamp(40px, 8vw, 56px);
+  width: 1px;
+  background: #d1d5db;
+  flex-shrink: 0;
+}
+
+.ryzcle-wordmark {
+  height: clamp(40px, 8vw, 64px);
+  object-fit: contain;
+  flex-shrink: 0;
+  max-width: 100%;
+}
+
+.ryzcle-description {
   margin: 0;
-}
-
-.language-level {
-  font-size: 14px;
-  color: #555;
-  font-weight: bold;
-  margin-bottom: 6px;
-}
-
-.language-desc {
-  font-size: 14px;
   color: #666;
-  line-height: 1.5;
+  line-height: 1.7;
+  font-size: clamp(14px, 2vw, 16px);
+  text-align: center;
+}
+
+/* Tablet adjustments */
+@media (max-width: 768px) {
+  .ryzcle-cards-container {
+    gap: 30px;
+  }
+  
+  .ryzcle-logo-row {
+    gap: 20px;
+  }
+  
+  .ryzcle-header {
+    margin-bottom: 50px;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+  .ryzcle-card {
+    border-radius: 24px;
+  }
+  
+  .ryzcle-logo-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .ryzcle-divider {
+    width: 80%;
+    height: 1px;
+  }
+  
+  .ryzcle-description {
+    text-align: center;
+  }
 }
 
 .profile-pic {
