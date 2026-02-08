@@ -302,15 +302,13 @@ section h2 {
 }
 /* End Portfolio Card */
 
-/* ======================================================
-   RYZCLE SECTION
-====================================================== */
+/* RYZCLE SECTION */
 #ryzcle {
   padding: 90px 16px;
-  background: transparent; /* background biru body tetap terlihat */
+  background: transparent; 
 }
 
-/* ---------- HEADER ---------- */
+/* HEADER */
 .ryzcle-header {
   text-align: center;
   max-width: 900px;
@@ -331,16 +329,16 @@ section h2 {
   color: #111827;
 }
 
-/* ---------- CARDS LAYOUT ---------- */
+/* CARDS LAYOUT */
 .ryzcle-cards {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* desktop */
+  grid-template-columns: repeat(2, 1fr); 
   gap: 40px;
 }
 
-/* ---------- CARD ---------- */
+/* CARD */
 .ryzcle-card {
   background: #ffffff;
   border-radius: 40px;
@@ -355,14 +353,14 @@ section h2 {
   box-shadow: 0 30px 60px rgba(0,0,0,0.09);
 }
 
-/* ---------- LOGO ROW (SELALU SEJAJAR) ---------- */
+/* LOGO ROW (SELALU SEJAJAR) */
 .ryzcle-logo-row {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: clamp(20px, 4vw, 40px);
   margin-bottom: 36px;
-  flex-wrap: nowrap; /* ⬅️ kunci horizontal */
+  flex-wrap: nowrap;
 }
 
 .ryzcle-icon {
@@ -384,7 +382,7 @@ section h2 {
   flex-shrink: 0;
 }
 
-/* ---------- DESCRIPTION ---------- */
+/* DESCRIPTION */
 .ryzcle-desc {
   text-align: center;
   font-size: clamp(14px, 2vw, 16px);
@@ -392,9 +390,7 @@ section h2 {
   color: #6b7280;
 }
 
-/* ======================================================
-   TABLET (<= 900px)
-====================================================== */
+/* TABLET (<= 900px) */
 @media (max-width: 900px) {
   .ryzcle-cards {
     grid-template-columns: repeat(2, 1fr);
@@ -402,16 +398,14 @@ section h2 {
   }
 }
 
-/* ======================================================
-   MOBILE (SEMUA HANDPHONE)
-====================================================== */
+/* MOBILE (SEMUA HANDPHONE) */
 @media (max-width: 600px) {
   #ryzcle {
     padding: 70px 14px;
   }
 
   .ryzcle-cards {
-    grid-template-columns: 1fr; /* card atas–bawah */
+    grid-template-columns: 1fr;
     gap: 24px;
   }
 
