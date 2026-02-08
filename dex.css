@@ -302,121 +302,77 @@ section h2 {
 }
 /* End Portfolio Card */
 
-/* Ryzcle Section Styles */
-.ryzcle-header {
+/* ===== Language Cards ===== */
+.language-cards {
   max-width: 1200px;
-  margin: 0 auto 80px;
-  text-align: center;
-}
-
-.ryzcle-label {
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #999;
-}
-
-.ryzcle-title {
-  margin-top: 16px;
-  font-size: clamp(28px, 5vw, 42px);
-  font-weight: 700;
-  color: #1a1a1a;
-}
-
-.ryzcle-cards-container {
-  max-width: 1200px;
-  margin: 0 auto;
+  margin: 60px auto 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
   gap: 40px;
-  align-items: stretch;
 }
 
-.ryzcle-card {
-  height: 100%;
+.language-card {
+  background: #ffffff;
   border-radius: 40px;
-  padding: clamp(24px, 4vw, 56px);
-  background: white;
-  border: 1px solid #e5e5e5;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-  transition: all 0.3s ease;
+  padding: 48px 42px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: all 0.35s ease;
 }
 
-.ryzcle-card:hover {
-  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-  transform: translateY(-4px);
+.language-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.08);
 }
 
-.ryzcle-logo-row {
+.language-logo-row {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(20px, 4vw, 40px);
-  margin-bottom: 40px;
+  gap: 36px;
+  margin-bottom: 36px;
   flex-wrap: wrap;
 }
 
-.ryzcle-icon {
-  height: clamp(40px, 8vw, 64px);
+.language-icon {
+  height: 56px;
   object-fit: contain;
-  flex-shrink: 0;
 }
 
-.ryzcle-divider {
-  height: clamp(40px, 8vw, 56px);
-  width: 1px;
-  background: #d1d5db;
-  flex-shrink: 0;
-}
-
-.ryzcle-wordmark {
-  height: clamp(40px, 8vw, 64px);
-  object-fit: contain;
-  flex-shrink: 0;
+.language-wordmark {
+  height: 56px;
   max-width: 100%;
+  object-fit: contain;
 }
 
-.ryzcle-description {
-  margin: 0;
-  color: #666;
-  line-height: 1.7;
-  font-size: clamp(14px, 2vw, 16px);
+.language-divider {
+  width: 1px;
+  height: 52px;
+  background: #d1d5db;
+}
+
+.language-desc {
   text-align: center;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #6b7280;
 }
 
-/* Tablet adjustments */
-@media (max-width: 768px) {
-  .ryzcle-cards-container {
-    gap: 30px;
-  }
-  
-  .ryzcle-logo-row {
-    gap: 20px;
-  }
-  
-  .ryzcle-header {
-    margin-bottom: 50px;
-  }
-}
-
-/* Mobile adjustments */
+/* Mobile */
 @media (max-width: 480px) {
-  .ryzcle-card {
-    border-radius: 24px;
+  .language-card {
+    border-radius: 26px;
+    padding: 32px 24px;
   }
-  
-  .ryzcle-logo-row {
+
+  .language-logo-row {
     flex-direction: column;
-    gap: 15px;
+    gap: 16px;
   }
-  
-  .ryzcle-divider {
+
+  .language-divider {
     width: 80%;
     height: 1px;
-  }
-  
-  .ryzcle-description {
-    text-align: center;
   }
 }
 
