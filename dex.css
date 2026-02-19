@@ -794,132 +794,162 @@ footer p {
 }
 /* End .Footer*/
 
-/* ── FOUNDER BIO ── */
-.founder-bio {
-  max-width: 860px;
-  margin: 60px auto 0;
+/* ── FOUNDER BIO (editorial style) ── */
+
+.founder-wrap {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 0 32px;
+  margin-top: 64px;
+  padding-top: 48px;
+  border-top: 1px solid #e5e7eb;
 }
 
-.founder-bio-inner {
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: 24px;
-  padding: 48px 52px;
-  box-shadow: 0 12px 36px rgba(30, 96, 255, 0.08);
-  position: relative;
-  overflow: hidden;
+/* sidebar kiri */
+.founder-sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding-top: 6px;
 }
 
-/* top accent bar */
-.founder-bio-inner::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #cce7ff, #5654ff, #AFFFB0);
-  border-radius: 24px 24px 0 0;
-}
-
-.founder-bio-header {
-  margin-bottom: 28px;
-}
-
-.founder-tag {
-  display: inline-block;
-  font-size: 0.7rem;
+.founder-sidebar-label {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  font-size: 0.62rem;
   font-weight: 700;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #5654ff;
-  background: #eef0ff;
-  padding: 5px 14px;
-  border-radius: 100px;
-  margin-bottom: 16px;
+  color: #9ca3af;
+  white-space: nowrap;
 }
 
-.founder-bio-name {
-  font-size: 1.55rem;
+.founder-sidebar-line {
+  flex: 1;
+  width: 1px;
+  background: linear-gradient(to bottom, #d1d5db, transparent);
+  min-height: 80px;
+}
+
+/* konten kanan */
+.founder-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* identitas */
+.founder-eyebrow {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #598bff;
+  margin: 0 0 10px;
+}
+
+.founder-headline {
+  font-size: clamp(1.4rem, 3vw, 2rem);
   font-weight: 700;
   color: #0d1d3a;
-  margin: 0 0 6px;
+  line-height: 1.25;
   letter-spacing: -0.02em;
-}
-
-.founder-bio-role {
-  font-size: 0.9rem;
-  color: #6b7280;
-  font-weight: 500;
   margin: 0;
 }
 
-.founder-bio-divider {
-  height: 1px;
-  background: #e5e7eb;
-  margin-bottom: 28px;
+.founder-headline em {
+  font-style: normal;
+  color: #598bff;
 }
 
-.founder-bio-text {
+/* paragraf */
+.founder-paragraphs {
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  margin-bottom: 32px;
+  gap: 16px;
+  padding-left: 20px;
+  border-left: 2px solid #e0eaff;
 }
 
-.founder-bio-text p {
-  font-size: 0.985rem;
-  line-height: 1.78;
+.founder-paragraphs p {
+  font-size: 0.96rem;
+  line-height: 1.8;
   color: #3a4d7c;
   margin: 0;
 }
 
-.founder-bio-text strong {
+.founder-paragraphs strong {
   color: #1248c4;
   font-weight: 600;
 }
 
-.founder-bio-footer {
-  border-top: 1px solid #e5e7eb;
-  padding-top: 24px;
+/* stack */
+.founder-stack {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
 }
 
-.founder-stack-label {
-  font-size: 0.72rem;
+.founder-stack-ttl {
+  font-size: 0.68rem;
   font-weight: 700;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: #9ca3af;
-  margin-bottom: 12px;
+  white-space: nowrap;
 }
 
-.founder-stack-tags {
+.founder-chips {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
 
-.founder-stack-tags span {
-  font-size: 0.8rem;
+.founder-chips span {
+  font-size: 0.78rem;
   font-weight: 600;
-  color: #1248c4;
-  background: #f0f7ff;
-  border: 1px solid #d0e4ff;
-  padding: 5px 14px;
-  border-radius: 100px;
-  transition: background 0.2s, color 0.2s;
+  color: #3a4d7c;
+  background: #f5f8ff;
+  border: 1px solid #d8e4ff;
+  padding: 4px 14px;
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+  transition: background 0.18s, color 0.18s, border-color 0.18s;
 }
 
-.founder-stack-tags span:hover {
+.founder-chips span:hover {
   background: #1e60ff;
   color: #fff;
   border-color: #1e60ff;
 }
 
+/* responsive */
 @media (max-width: 600px) {
-  .founder-bio-inner {
-    padding: 32px 24px;
+  .founder-wrap {
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
-  .founder-bio-name {
-    font-size: 1.25rem;
+  .founder-sidebar {
+    flex-direction: row;
+    align-items: center;
+    padding-top: 0;
+  }
+  .founder-sidebar-label {
+    writing-mode: horizontal-tb;
+    transform: none;
+  }
+  .founder-sidebar-line {
+    flex: 1;
+    width: auto;
+    height: 1px;
+    min-height: unset;
+    background: linear-gradient(to right, #d1d5db, transparent);
+  }
+  .founder-headline {
+    font-size: 1.3rem;
   }
 }
 /* ── END FOUNDER BIO ── */
